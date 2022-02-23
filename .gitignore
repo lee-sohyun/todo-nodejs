@@ -1,0 +1,13 @@
+# Logs
+logs
+
+# AWS Files
+
+# Dependency directories
+node_modules/
+
+# IDEA
+.idea/
+
+# vscode
+.vscode/
