@@ -38,6 +38,20 @@ app.post('/complete', (req, res) => {
   res.redirect('/');
 });
 
+app.post('/return', (req, res) => {
+  let returnTask = req.body.check;
+  if (typeof returnTask === 'string') {
+    task.push(returnTask);
+    complete.splice(complete.indexOf(returnTask), 1);
+  } else if (typeof returnTask === 'object') {
+    for (let i = 0; i < returnTask.length; i++) {
+      task.push(returnTask[i]);
+      complete.splice(complete.indexOf(returnTask[i]), 1)
+    }
+  }
+  res.redirect('/');
+});
+
 app.listen(port, (err) => {
     if(err) {
         console.log(err)
