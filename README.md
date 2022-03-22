@@ -12,7 +12,3 @@ git clone https://github.com/lee-sohyun/todo-nodejs.git
 ```
 node index.js
 ```
-
----
-### Relation
-
